@@ -6,16 +6,22 @@ import { AppComponent } from './app.component';
 import { GameComponent } from './components/game/game.component';
 import { ButtonGameDirective } from './shared/directives/button-game.directive';
 import { ValidatedGameDirective } from './shared/directives/validated-game.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogValidatedGameComponent } from './shared/directives/components/dialog-validated-game/dialog-validated-game.component';
 @NgModule({
   declarations: [
     AppComponent,
     GameComponent,
     ValidatedGameDirective,
-    ButtonGameDirective
+    ButtonGameDirective,
+    DialogValidatedGameComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
